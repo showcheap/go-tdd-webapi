@@ -11,6 +11,8 @@ type Product struct {
 	Price float64 `json:"price"`
 }
 
+var products []Product
+
 func (p *Product) getProduct() error {
 	return errors.New("Not implemented")
 }
@@ -29,5 +31,6 @@ func (p *Product) createProduct() error {
 
 // GetProducts get all products
 func GetProducts() ([]Product, error) {
-	return nil, errors.New("Not implemented")
+	products = make([]Product, 0)
+	return products, nil
 }
